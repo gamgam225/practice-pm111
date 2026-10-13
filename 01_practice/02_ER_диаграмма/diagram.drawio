@@ -1,0 +1,59 @@
+<mxGraphModel dx="1422" dy="798" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="826" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+
+    <mxCell id="marka" value="Марка&#10;─────────&#10;&#13;id (PK)&#10;название&#10;страна" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="40" y="40" width="180" height="100" as="geometry" />
+    </mxCell>
+
+    <mxCell id="avto" value="Автомобиль&#10;─────────&#10;&#13;id (PK)&#10;VIN&#10;год_выпуска&#10;цвет&#10;цена&#10;id_марки (FK) →" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="300" y="40" width="200" height="160" as="geometry" />
+    </mxCell>
+
+    <mxCell id="prodazha" value="Продажа&#10;─────────&#10;&#13;id (PK)&#10;дата&#10;сумма&#10;id_автомобиля (FK) →&#10;id_клиента (FK) →&#10;id_сотрудника (FK) →" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="580" y="40" width="220" height="160" as="geometry" />
+    </mxCell>
+
+    <mxCell id="klient" value="Клиент&#10;─────────&#10;&#13;id (PK)&#10;ФИО&#10;телефон&#10;email&#10;адрес" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="580" y="280" width="220" height="140" as="geometry" />
+    </mxCell>
+
+    <mxCell id="sotrudnik" value="Сотрудник&#10;─────────&#10;&#13;id (PK)&#10;ФИО&#10;должность&#10;телефон" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="880" y="280" width="200" height="140" as="geometry" />
+    </mxCell>
+
+    <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=ERmany;startArrow=ERone;endFill=0;startFill=0;strokeWidth=2;" edge="1" parent="1" source="marka" target="avto">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=ERmany;startArrow=ERone;endFill=0;startFill=0;strokeWidth=2;" edge="1" parent="1" source="avto" target="prodazha">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=ERmany;startArrow=ERone;endFill=0;startFill=0;strokeWidth=2;" edge="1" parent="1" source="klient" target="prodazha">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=ERmany;startArrow=ERone;endFill=0;startFill=0;strokeWidth=2;" edge="1" parent="1" source="sotrudnik" target="prodazha">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <mxCell id="l1" value="1:N" style="text;html=1;align=center;verticalAlign=middle;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="230" y="80" width="50" height="20" as="geometry" />
+    </mxCell>
+    <mxCell id="l2" value="1:N" style="text;html=1;align=center;verticalAlign=middle;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="530" y="100" width="50" height="20" as="geometry" />
+    </mxCell>
+    <mxCell id="l3" value="1:N" style="text;html=1;align=center;verticalAlign=middle;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="660" y="240" width="50" height="20" as="geometry" />
+    </mxCell>
+    <mxCell id="l4" value="1:N" style="text;html=1;align=center;verticalAlign=middle;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="880" y="240" width="50" height="20" as="geometry" />
+    </mxCell>
+
+    <mxCell id="title" value="ER-диаграмма: Автосалон (Crow's Foot)" style="text;html=1;align=center;verticalAlign=middle;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="300" y="0" width="500" height="30" as="geometry" />
+    </mxCell>
+  </root>
+</mxGraphModel>
