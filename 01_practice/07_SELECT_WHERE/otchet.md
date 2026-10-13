@@ -1,6 +1,3 @@
-# Задание: 07_SELECT_WHERE
+# Задание 07: SELECT / WHERE
 
-## Цель
-Описание задания 07_SELECT_WHERE.
-
-## Вывод
+Скрипт `01_select.sql`: выборки с условиями, LIKE, BETWEEN.
